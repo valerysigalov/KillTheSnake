@@ -1,0 +1,43 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.game.killthesnake"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+        },
+        "cordova-plugin-facebookads": {
+            "PACKAGE_NAME": "com.game.killthesnake"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.game.killthesnake"
+        },
+        "cordova-plugin-game": {
+            "PACKAGE_NAME": "com.game.killthesnake"
+        },
+        "cordova-plugin-admob-facebook": {
+            "PACKAGE_NAME": "com.game.killthesnake"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.game.killthesnake"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ios.killthesnake"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+        },
+        "cordova-facebook-audnet-sdk": {
+            "PACKAGE_NAME": "com.game.killthesnake"
+        }
+    }
+}

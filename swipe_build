@@ -1,0 +1,28 @@
+if [[ -z $1 ]]; then
+    echo "Platform name is not specified, it should be android, ios or fireos."
+    exit 1
+else
+    echo "Platform $1."
+fi
+
+cd uglifyjs
+
+sed -i '' "s/constants\.PLATFORM = \"replace\";/constants\.PLATFORM = \"$1\";/g" constants.js
+
+sed -i '' 's/constants.CONTROL = \"replace\";/constants.CONTROL = \"swipe\";/g' constants.js
+
+/usr/local/bin/uglifyjs constants.js gapi.js snake.js --comress sequences,dead_code,conditionals,comparisons,booleans,loops,unused,if_return,join_vars,drop_console --mangle toplevel,eval --mangle-props --reserve-domprops --reserved-file reserved.js --name-cache map --output compiled.js
+
+mv compiled.js ../www/js
+
+sed -i '' "s/constants.PLATFORM = \"$1\";/constants.PLATFORM = \"replace\";/g" constants.js
+
+sed -i '' 's/constants.CONTROL = \"swipe\";/constants.CONTROL = \"replace\";/g' constants.js
+
+cd ..
+
+cp swipe_config.xml config.xml
+
+cp res/ios/swipe/video/tutorial.mp4 www/res/video
+
+cordova build ios --release
