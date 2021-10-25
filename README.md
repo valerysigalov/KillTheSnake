@@ -1,5 +1,5 @@
 # KillTheSnake
-Kill The Snake - second life for all time classic game
+Kill The Snake - second life for all time classic game<br/>
 Snake is almost 40. It was cloned many times, but core rules remained about the same...<br/>
 <b>Kill The Snake</b> takes modern approach...<br/>
 <i>The goal is to make the snake shorter and shorter until it completely disappears.</i><br/>
